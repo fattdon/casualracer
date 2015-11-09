@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CasualRacer.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,8 @@ namespace CasualRacer.Pages
     /// </summary>
     public partial class GamePage : Page
     {
+        
+
         public GamePage()
         {
             InitializeComponent();

@@ -4,11 +4,13 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:CasualRacer.Pages"
+      xmlns:CasualRacer="clr-namespace:CasualRacer"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
       Title="GamePage">
 
-    <Grid Background="DarkRed">
+    <Grid>
         <Button x:Name="backButton" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Click="backButton_Click"/>
+        <CasualRacer:GameControl Margin="20 50 20 20"/>
     </Grid>
 </Page>
