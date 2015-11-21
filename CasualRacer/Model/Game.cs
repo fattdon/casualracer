@@ -8,16 +8,30 @@ namespace CasualRacer.Model
 {
     internal class Game
     {
-        public Player Player1 { get; set; }
+        public Track Track { get; private set; }
+
+        public Player Player1 { get; private set; }
 
         public Game()
         {
+            Track = Track.Load("./Tracks/Track1.txt");
+
             Player1 = new Player();
         }
 
         public void Update(TimeSpan totalTime, TimeSpan elapsedTime)
         {
-            Player1.Update(totalTime,elapsedTime);
+            //Lenkung
+            if (Player1.WheelLeft)
+            {
+                Player1.Direction -= (float)elapsedTime.TotalSeconds * 100;
+            }
+            if (Player1.WheelRight)
+            {
+                Player1.Direction += (float)elapsedTime.TotalSeconds * 100;
+            }
+
+            //Beschleunigung & Bremse
         }
     }
 }

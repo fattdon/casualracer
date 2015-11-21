@@ -35,6 +35,11 @@ namespace CasualRacer.Pages
             NavigationService.Navigate(new OptionPage());
         }
 
+        private void creditsButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new CreditsPage());
+        }
+
         private void exitButton_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.MainWindow.Close();

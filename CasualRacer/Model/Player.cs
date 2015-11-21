@@ -12,6 +12,8 @@ namespace CasualRacer.Model
     {
         private float direction = 0f;
 
+        private float velocity;
+
         public Vector position = new Vector();
 
         public float Direction
@@ -22,10 +24,32 @@ namespace CasualRacer.Model
                 if(direction != value)
                 {
                     direction = value;
-                    if(PropertyChanged != null)
-                    {
-                        PropertyChanged(this, new PropertyChangedEventArgs("Direction"));
-                    }
+                    //if(PropertyChanged != null)
+                    //{
+                    //    PropertyChanged(this, new PropertyChangedEventArgs("Direction"));
+                    //}
+
+                    //Fragezeichen bedeutet, dass eine Null Abfrage durchgeführt wird!!!
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Direction)));
+                }
+            }
+        }
+
+        public float Velocity
+        {
+            get { return velocity; }
+            set
+            {
+                if (velocity != value)
+                {
+                    velocity = value;
+                    //if(PropertyChanged != null)
+                    //{
+                    //    PropertyChanged(this, new PropertyChangedEventArgs("Direction"));
+                    //}
+
+                    //Fragezeichen bedeutet, dass eine Null Abfrage durchgeführt wird!!!
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Velocity)));
                 }
             }
         }
@@ -38,31 +62,24 @@ namespace CasualRacer.Model
                 if(position != value)
                 {
                     position = value;
-                    if (PropertyChanged != null)
-                        PropertyChanged(this, new PropertyChangedEventArgs("Position"));
+                    //if (PropertyChanged != null)
+                    //    PropertyChanged(this, new PropertyChangedEventArgs("Position"));
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Position)));
                 }
             }
         }
 
         public bool Acceleration { get; set; }
+
+        public bool Break { get; set; }
+
         public bool WheelLeft { get; set; }
+
         public bool WheelRight { get; set; }
 
         public Player()
         {
 
-        }
-
-        public void Update(TimeSpan totalTime, TimeSpan elapsedTime)
-        {
-            if(WheelLeft)
-            {
-                Direction -= (float)elapsedTime.TotalSeconds * 100;
-            }
-            if(WheelRight)
-            {
-                Direction += (float)elapsedTime.TotalSeconds * 100;
-            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

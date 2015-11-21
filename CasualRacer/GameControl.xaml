@@ -6,12 +6,12 @@
              xmlns:local="clr-namespace:CasualRacer"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid Background="DarkGray">
+    <Canvas>
         <Border Width="20"
                 Height="20"
                 Background="Red"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
+                Canvas.Left="-10"
+                Canvas.Top="-10"
                 RenderTransformOrigin="0.5,0.5">
             <Border.RenderTransform>
                 <TransformGroup>
@@ -20,5 +20,5 @@
                 </TransformGroup>
             </Border.RenderTransform>
         </Border>
-    </Grid>
+    </Canvas>
 </UserControl>

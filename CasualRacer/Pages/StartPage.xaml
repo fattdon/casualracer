@@ -17,6 +17,9 @@
             <Button x:Name="optionButton"
                     Content="Options"
                     Click="optionButton_Click"/>
+            <Button x:Name="creditsButton"
+                    Content="Credits"
+                    Click="creditsButton_Click"/>
             <Button x:Name="exitButton"
                     Content="Exit"
                     Click="exitButton_Click"/>
