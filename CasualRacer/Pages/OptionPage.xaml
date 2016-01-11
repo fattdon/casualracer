@@ -9,6 +9,7 @@
       Title="OptionPage">
 
     <Grid>
-        <Button x:Name="backButton" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Click="backButton_Click"/>
+        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Click" />
+
     </Grid>
 </Page>

@@ -9,20 +9,13 @@
       Title="StartPage">
 
     <Grid>
-        <Image Source="/CasualRacer;component/Assets/LogoCroped.png" Width="755" VerticalAlignment="Top" Margin="100"/>
+        <Image Source="/CasualRacer;component/Assets/LogoCroped.png" Width="755" VerticalAlignment="Top" Margin="100" />
         <StackPanel Width="200" VerticalAlignment="Bottom" Margin="100">
-            <Button x:Name="startButton"
-                    Content="Start Game"
-                    Click="startButton_Click"/>
-            <Button x:Name="optionButton"
-                    Content="Options"
-                    Click="optionButton_Click"/>
-            <Button x:Name="creditsButton"
-                    Content="Credits"
-                    Click="creditsButton_Click"/>
-            <Button x:Name="exitButton"
-                    Content="Exit"
-                    Click="exitButton_Click"/>
+            <Button Content="Start Game" Click="GameButton_Click"  />
+            <Button Content="Options" Click="OptionsButton_Click" />
+            <Button Content="Credits" Click="CreditsButton_Click" />
+            <Button Content="Exit" Click="ExitButton_Click" />
         </StackPanel>
+        
     </Grid>
 </Page>

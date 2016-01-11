@@ -1,22 +1,23 @@
 ﻿<UserControl x:Class="CasualRacer.GameControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:CasualRacer"
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300" Unloaded="UserControl_Unloaded">
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             Unloaded="UserControl_Unloaded"
+             d:DesignHeight="300"
+             d:DesignWidth="300"
+             mc:Ignorable="d">
     <Canvas>
-        <Image  Width="20"
-                Height="20"
-                Canvas.Left="-10"
+        <Image Canvas.Left="-10"
                 Canvas.Top="-10"
-                RenderTransformOrigin="0.5,0.5"
-               Source="Assets/car_red.png">
+                Width="20"
+                Height="20"
+                RenderTransformOrigin="0.5,0.5" Source="Assets/car_red.png">
             <Image.RenderTransform>
                 <TransformGroup>
-                    <RotateTransform Angle="{Binding Player1.Direction}"/>
-                    <TranslateTransform X="{Binding Player1.Position.X}" Y="{Binding Player1.Position.Y}"/>
+                    <RotateTransform Angle="{Binding Path=Player1.Direction}" />
+                    <TranslateTransform X="{Binding Path=Player1.Position.X}" Y="{Binding Path=Player1.Position.Y}" />
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
